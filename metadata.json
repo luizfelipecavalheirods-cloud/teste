@@ -1,0 +1,8 @@
+{
+  "name": "Code Hunters Brasil",
+  "description": "Uma plataforma global de marketing gamificado onde os usuários escaneiam produtos para desbloquear recompensas, missões e campanhas de marcas.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}

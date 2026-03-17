@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Leaflet Overrides */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  outline: none;
+}
+
+.leaflet-tile-pane {
+  /* Prevent clipping during animations */
+  will-change: transform;
+}
+
+.leaflet-tile {
+  /* Ensure tiles are not clipped by sub-pixel rendering issues */
+  outline: 1px solid transparent;
+}
+
+/* Hide navigation on desktop for demo */
+@media (min-width: 768px) {
+  #root {
+    display: flex;
+    justify-content: center;
+    background: #111;
+    min-height: 100vh;
+  }
+}
